@@ -1,4 +1,3 @@
-.. vim: set filetype=rst :
 
 My vim configuration for backup purposes.
 
