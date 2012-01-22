@@ -16,7 +16,7 @@ filetype plugin indent on       " load file type plugins + indentation
 "" Whitespace
 set nowrap                      " don't wrap lines
 set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
-set expandtab                   " use spaces, not tabs (optional)
+" set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
 "" Searching
@@ -46,8 +46,8 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" clear search hl
-nmap <silent> ,/ :nohlsearch<CR>
+" clear search hl by pressing ESC
+nnoremap <CR> :nohlsearch<CR>/<BS>
 
 set nobackup                    " no backup or swap file  
 set noswapfile
