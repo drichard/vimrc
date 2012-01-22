@@ -45,6 +45,7 @@ map <C-h> <C-w>h                " Easy window navigation
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+inoremap <S-Space> <C-n>
 
 " clear search hl by pressing ESC
 nnoremap <CR> :nohlsearch<CR>/<BS>
