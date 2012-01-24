@@ -16,7 +16,7 @@ filetype plugin indent on       " load file type plugins + indentation
 "" Whitespace
 set nowrap                      " don't wrap lines
 set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
-" set expandtab                   " use spaces, not tabs (optional)
+set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
 "" Searching
@@ -36,12 +36,14 @@ set number                      " line numbers
 nnoremap ; :
 nnoremap : ;
 
-map <up> <nop>                  " unmap arrow keys
+" unmap arrow keys
+map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-map <C-h> <C-w>h                " Easy window navigation
+" Easy window navigation
+map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l

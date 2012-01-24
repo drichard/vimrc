@@ -12,7 +12,7 @@ Plugins
 -------
 
 1. SnipMate
-
+2. AutoClose (http://www.vim.org/scripts/script.php?script_id=1849)
 
 Installation
 ------------
