@@ -55,11 +55,20 @@ nnoremap <CR> :nohlsearch<CR>/<BS>
 set nobackup                    " no backup or swap file  
 set noswapfile
 
-"" disable toolbar in gvim
-if exists("+guioptions")
-  "" set guioptions-=T
-  set guifont=Menlo:h12
+if has("gui_running")
+  "" disable toolbar in gvim
+  set guioptions-=T
+
+  " set different fonts for mac and linux
+  if has("unix")
+    let s:uname = system("uname")
+    if s:uname == "Darwin"
+      set guifont=Menlo:h12
+    else
+      set guifont=DejaVu\ Sans\ Mono\ 10
+    endif
+  endif
 endif
 
 " set colorscheme again, fixing a bug in gvim where syntax would not be bold
-autocmd VimEnter * colorscheme solarized
+" "autocmd VimEnter * colorscheme solarized
