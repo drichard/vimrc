@@ -42,6 +42,12 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
+" Edit vimrc \ev
+nnoremap <silent> <Leader>ev :tabnew<CR>:e ~/.vimrc<CR>
+
+" Run current script in ruby
+nnoremap <silent> <Leader>r :w<CR> :! ruby % <CR>
+
 " Easy window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -52,12 +58,18 @@ inoremap <C-Space> <C-n>
 " clear search hl by pressing ESC
 nnoremap <CR> :nohlsearch<CR>/<BS>
 
+
+
 set nobackup                    " no backup or swap file  
 set noswapfile
 
 if has("gui_running")
   "" disable toolbar in gvim
   set guioptions-=T
+  
+  " hide scrollbars (buggy on gvim ubuntu)
+  set guioptions+=LlRrb
+  set guioptions-=LlRrb
 
   " set different fonts for mac and linux
   if has("unix")
@@ -72,3 +84,4 @@ endif
 
 " set colorscheme again, fixing a bug in gvim where syntax would not be bold
 " "autocmd VimEnter * colorscheme solarized
+
