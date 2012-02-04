@@ -1,7 +1,7 @@
 " solarized
 syntax enable
 set background=dark
-" next 3 options for vim in terminal
+" next 3 options for vim solarized in terminal
 set t_Co=256
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
@@ -58,8 +58,6 @@ inoremap <C-Space> <C-n>
 " clear search hl by pressing ESC
 nnoremap <CR> :nohlsearch<CR>/<BS>
 
-
-
 set nobackup                    " no backup or swap file  
 set noswapfile
 
@@ -81,7 +79,3 @@ if has("gui_running")
     endif
   endif
 endif
-
-" set colorscheme again, fixing a bug in gvim where syntax would not be bold
-" "autocmd VimEnter * colorscheme solarized
-
