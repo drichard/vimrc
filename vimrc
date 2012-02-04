@@ -1,3 +1,16 @@
+set nocompatible                " choose no compatibility with legacy vim
+filetype off
+
+" vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+filetype plugin indent on       " required!
+
 " solarized
 syntax enable
 set background=dark
@@ -8,10 +21,8 @@ let g:solarized_termtrans=1
 colorscheme solarized
 
 " from http://mislav.uniqpath.com/2011/12/vim-revisited/
-set nocompatible                " choose no compatibility with legacy vim
 set encoding=utf-8
 set showcmd                     " display incomplete commands
-filetype plugin indent on       " load file type plugins + indentation
 
 "" Whitespace
 set nowrap                      " don't wrap lines
