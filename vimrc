@@ -10,6 +10,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-endwise'
+Bundle 'git://git.wincent.com/command-t.git'
 
 filetype plugin indent on       " required!
 
