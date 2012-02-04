@@ -8,6 +8,8 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-endwise'
 
 filetype plugin indent on       " required!
 
@@ -45,7 +47,7 @@ set noerrorbells         " don't beep
 
 set number                      " line numbers
 nnoremap ; :
-nnoremap : ;
+" nnoremap : ;
 
 " unmap arrow keys
 map <up> <nop>

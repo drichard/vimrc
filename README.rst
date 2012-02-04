@@ -11,8 +11,10 @@ Themes
 Plugins
 -------
 
-1. SnipMate
-2. AutoClose (http://www.vim.org/scripts/script.php?script_id=1849)
+* vim-surround 
+* vim-endwise
+
+All plugins are installed with vundle (https://github.com/gmarik/vundle/blob/master/README.md).
 
 Installation
 ------------
