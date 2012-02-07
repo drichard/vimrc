@@ -96,7 +96,7 @@ if has("gui_running")
   " set different fonts for mac and linux
   if has("unix")
     let s:uname = system("uname")
-    if s:uname == "Darwin"
+    if s:uname == "Darwin\n"
       set guifont=Menlo:h12
     else
       set guifont=DejaVu\ Sans\ Mono\ 10
