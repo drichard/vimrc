@@ -62,6 +62,9 @@ nnoremap <silent> <Leader>ev :tabnew<CR>:e ~/.vimrc<CR>
 " Run current script in ruby
 nnoremap <silent> <Leader>r :w<CR> :! ruby % <CR>
 
+" Switch between two last files
+nnoremap <leader><leader> <c-^>
+
 " Easy window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -75,8 +78,15 @@ nnoremap <CR> :nohlsearch<CR>/<BS>
 set nobackup                    " no backup or swap file  
 set noswapfile
 
+" flush commandT cache when window regains focus or files have been written
+augroup CommandTExtension
+  autocmd!
+  autocmd FocusGained * CommandTFlush
+  autocmd BufWritePost * CommandTFlush
+augroup END
+
 if has("gui_running")
-  "" disable toolbar in gvim
+  " disable toolbar in gvim
   set guioptions-=T
   
   " hide scrollbars (buggy on gvim ubuntu)
