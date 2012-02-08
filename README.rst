@@ -13,7 +13,8 @@ Plugins
 
 * vim-surround 
 * vim-endwise
-* [Command-T](https://github.com/wincent/Command-T)
+
+[Command-T](https://github.com/wincent/Command-T)
 
 All plugins are installed with vundle (https://github.com/gmarik/vundle/blob/master/README.md).
 
