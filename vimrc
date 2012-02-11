@@ -86,6 +86,8 @@ augroup CommandTExtension
   autocmd BufWritePost * CommandTFlush
 augroup END
 
+set wildignore=tmp/**
+
 if has("gui_running")
   " disable toolbar in gvim
   set guioptions-=T
