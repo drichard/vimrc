@@ -7,6 +7,7 @@ Themes
 ------
 
 1. Solarized
+2. Molokai
 
 Plugins
 -------
@@ -14,7 +15,10 @@ Plugins
 * vim-surround 
 * vim-endwise
 * vim-rails
-* Command-T (https://github.com/wincent/Command-T)
+* Command-T 
+  * Needs vim compiled with ruby support
+* Powerline (needs patched font)
+  * https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts
 
 All plugins are installed with vundle (https://github.com/gmarik/vundle/blob/master/README.md).
 
