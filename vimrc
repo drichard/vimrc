@@ -11,7 +11,9 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
+Bundle 'tomasr/molokai'
 Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'Lokaltog/vim-powerline'
 
 filetype plugin indent on       " required!
 
@@ -79,6 +81,10 @@ nnoremap <CR> :nohlsearch<CR>/<BS>
 set nobackup                    " no backup or swap file  
 set noswapfile
 
+" Powerline
+set laststatus=2
+let Powerline_symbols = 'fancy'
+
 " flush commandT cache when window regains focus or files have been written
 augroup CommandTExtension
   autocmd!
@@ -102,7 +108,7 @@ if has("gui_running")
     if s:uname == "Darwin\n"
       set guifont=Menlo:h12
     else
-      set guifont=DejaVu\ Sans\ Mono\ 10
+      set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
     endif
   endif
 endif
