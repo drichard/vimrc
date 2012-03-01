@@ -14,6 +14,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'tomasr/molokai'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-fugitive'
 
 filetype plugin indent on       " required!
 
@@ -53,11 +54,11 @@ set number                      " line numbers
 nnoremap ; :
 " nnoremap : ;
 
-" unmap arrow keys
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
+" use arrow keys to resize windows
+nmap <left>  :5wincmd <<cr>
+nmap <right> :5wincmd ><cr>
+nmap <up>    :5wincmd +<cr>
+nmap <down>  :5wincmd -<cr>
 
 " Edit vimrc \ev
 nnoremap <silent> <Leader>ev :tabnew<CR>:e ~/.vimrc<CR>
@@ -112,3 +113,4 @@ if has("gui_running")
     endif
   endif
 endif
+
