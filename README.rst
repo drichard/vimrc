@@ -15,6 +15,7 @@ Plugins
 * vim-surround 
 * vim-endwise
 * vim-rails
+* Fugitive    
 * Command-T 
   * Needs vim compiled with ruby support
 * Powerline (needs patched font)

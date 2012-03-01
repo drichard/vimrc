@@ -63,6 +63,9 @@ nmap <down>  :5wincmd -<cr>
 " Edit vimrc \ev
 nnoremap <silent> <Leader>ev :tabnew<CR>:e ~/.vimrc<CR>
 
+" reload vimrc when it's saved
+au BufWritePost .vimrc so ~/.vimrc
+
 " Run current script in ruby
 nnoremap <silent> <Leader>r :w<CR> :! ruby % <CR>
 
@@ -78,6 +81,14 @@ inoremap <C-Space> <C-n>
 
 " clear search hl by pressing ESC
 nnoremap <CR> :nohlsearch<CR>/<BS>
+
+" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
+
+" improve up/down movement on wrapped lines
+nnoremap j gj
+nnoremap k gk
 
 set nobackup                    " no backup or swap file  
 set noswapfile
