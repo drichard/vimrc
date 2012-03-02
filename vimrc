@@ -15,6 +15,7 @@ Bundle 'tomasr/molokai'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-fugitive'
+Bundle 'mileszs/ack.vim'
 
 filetype plugin indent on       " required!
 
@@ -42,35 +43,42 @@ set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
+set gdefault                    " search globally default
 
 "" http://nvie.com/posts/how-i-boosted-my-vim/
 let mapleader=","
 set hidden
 set autoindent
-set visualbell           " don't beep
-set noerrorbells         " don't beep
+" disable beep and visual bell
+set noeb vb t_vb=
 
 set number                      " line numbers
 nnoremap ; :
 " nnoremap : ;
 
 " use arrow keys to resize windows
-nmap <left>  :5wincmd <<cr>
-nmap <right> :5wincmd ><cr>
-nmap <up>    :5wincmd +<cr>
-nmap <down>  :5wincmd -<cr>
+nmap <silent> <left>  :5wincmd <<cr>
+nmap <silent> <right> :5wincmd ><cr>
+nmap <silent> <up>    :5wincmd +<cr>
+nmap <silent> <down>  :5wincmd -<cr>
 
 " Edit vimrc \ev
-nnoremap <silent> <Leader>ev :tabnew<CR>:e ~/.vimrc<CR>
+nnoremap <silent> <Leader>ev :e ~/.vimrc<CR>
 
 " reload vimrc when it's saved
-au BufWritePost .vimrc so ~/.vimrc
+" au BufWritePost .vimrc so ~/.vimrc
 
 " Run current script in ruby
 nnoremap <silent> <Leader>r :w<CR> :! ruby % <CR>
 
 " Switch between two last files
 nnoremap <leader><leader> <c-^>
+
+" select just pasted text
+nnoremap <leader>v V`]
+
+" vertical split window and focus it
+nnoremap <leader>w <C-w>v<C-w>l
 
 " Easy window navigation
 map <C-h> <C-w>h
@@ -92,6 +100,10 @@ nnoremap k gk
 
 set nobackup                    " no backup or swap file  
 set noswapfile
+
+" Ack vim
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+nnoremap <leader>a :Ack 
 
 " Powerline
 set laststatus=2
