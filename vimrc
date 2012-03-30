@@ -22,6 +22,7 @@ filetype plugin indent on       " required!
 " solarized
 syntax enable
 set background=dark
+
 " next 3 options for vim solarized in terminal
 set t_Co=256
 let g:solarized_termcolors=256
@@ -32,23 +33,24 @@ colorscheme solarized
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 
-"" Whitespace
+" Whitespace
 set nowrap                      " don't wrap lines
 set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
 set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
-"" Searching
+" Searching
 set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 set gdefault                    " search globally default
 
-"" http://nvie.com/posts/how-i-boosted-my-vim/
+" http://nvie.com/posts/how-i-boosted-my-vim/
 let mapleader=","
 set hidden
 set autoindent
+
 " disable beep and visual bell
 set noeb vb t_vb=
 
@@ -94,12 +96,19 @@ nnoremap <CR> :nohlsearch<CR>/<BS>
 vnoremap < <gv
 vnoremap > >gv
 
+" Force saving files that require root permission
+cmap w!! %!sudo tee > /dev/null %
+
 " improve up/down movement on wrapped lines
 nnoremap j gj
 nnoremap k gk
 
 set nobackup                    " no backup or swap file  
 set noswapfile
+
+" In vim 7.3.74 and higher you can set clipboard=unnamedplus to alias unnamed
+" register to the + register, which is the X Window clipboard.
+set clipboard=unnamedplus
 
 " Ack vim
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
