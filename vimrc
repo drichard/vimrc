@@ -16,6 +16,7 @@ Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mileszs/ack.vim'
+Bundle 'lukaszb/vim-web-indent'
 
 filetype plugin indent on       " required!
 
@@ -105,6 +106,10 @@ nnoremap k gk
 
 set nobackup                    " no backup or swap file  
 set noswapfile
+
+
+" Save all when focus is lost, skip untitled buffers
+:au FocusLost * silent! wa
 
 " In vim 7.3.74 and higher you can set clipboard=unnamedplus to alias unnamed
 " register to the + register, which is the X Window clipboard.
