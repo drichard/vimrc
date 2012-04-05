@@ -20,6 +20,11 @@ Plugins
   * Needs vim compiled with ruby support
 * Powerline (needs patched font)
   * https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts
+* Ack.vim
+* vim-web-indent
+  * Better JavaScript indentation
+* vim-coffee-script
+  * Needs coffeescript installed
 
 All plugins are installed with vundle (https://github.com/gmarik/vundle/blob/master/README.md).
 

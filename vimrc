@@ -17,6 +17,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mileszs/ack.vim'
 Bundle 'lukaszb/vim-web-indent'
+Bundle 'kchmck/vim-coffee-script'
 
 filetype plugin indent on       " required!
 
@@ -30,7 +31,7 @@ let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 colorscheme solarized
 
-" from http://mislav.uniqpath.com/2011/12/vim-revisited/
+" Defaults
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 
@@ -107,13 +108,21 @@ nnoremap k gk
 set nobackup                    " no backup or swap file  
 set noswapfile
 
-
 " Save all when focus is lost, skip untitled buffers
 :au FocusLost * silent! wa
 
 " In vim 7.3.74 and higher you can set clipboard=unnamedplus to alias unnamed
 " register to the + register, which is the X Window clipboard.
 set clipboard=unnamedplus
+
+" compile coffeescript on save and focus lost
+au BufWritePost *.coffee silent CoffeeMake! -b | cwindow
+au FocusLost *.coffee silent CoffeeMake! -b | cwindow
+
+" modify coffeescript syntax highlighting with solarized.
+" @members were red, should be blue instead
+hi link coffeeParen NONE
+hi link coffeeSpecialVar Identifier
 
 " Ack vim
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
