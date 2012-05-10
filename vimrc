@@ -18,6 +18,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'mileszs/ack.vim'
 Bundle 'lukaszb/vim-web-indent'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'wavded/vim-stylus'
+Bundle 'nono/vim-handlebars'
 
 filetype plugin indent on       " required!
 
@@ -52,6 +54,9 @@ set gdefault                    " search globally default
 let mapleader=","
 set hidden
 set autoindent
+
+" dont tell me when an open file has changed, simply load it
+set autoread
 
 " disable beep and visual bell
 set noeb vb t_vb=
@@ -139,7 +144,7 @@ augroup CommandTExtension
   autocmd BufWritePost * CommandTFlush
 augroup END
 
-set wildignore=tmp/**
+set wildignore=tmp/**,node_modules/**,bin/**,~/workspace/mindmaps/docs
 
 if has("gui_running")
   " disable toolbar in gvim

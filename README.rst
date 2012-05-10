@@ -25,6 +25,8 @@ Plugins
   * Better JavaScript indentation
 * vim-coffee-script
   * Needs coffeescript installed
+* vim-stylus
+* vim-handlebars
 
 All plugins are installed with vundle (https://github.com/gmarik/vundle/blob/master/README.md).
 
