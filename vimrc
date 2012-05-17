@@ -110,8 +110,11 @@ cmap w!! %!sudo tee > /dev/null %
 nnoremap j gj
 nnoremap k gk
 
-set nobackup                    " no backup or swap file  
-set noswapfile
+map <F8> :Explore<CR>
+
+set swapfile
+set dir=~/tmp
+set backupdir=~/tmp
 
 " Save all when focus is lost, skip untitled buffers
 :au FocusLost * silent! wa
@@ -121,8 +124,8 @@ set noswapfile
 set clipboard=unnamedplus
 
 " compile coffeescript on save and focus lost
-au BufWritePost *.coffee silent CoffeeMake! -b | cwindow
-au FocusLost *.coffee silent CoffeeMake! -b | cwindow
+"au BufWritePost *.coffee silent CoffeeMake! -b | cwindow
+"au FocusLost *.coffee silent CoffeeMake! -b | cwindow
 
 " modify coffeescript syntax highlighting with solarized.
 " @members were red, should be blue instead
@@ -144,7 +147,11 @@ augroup CommandTExtension
   autocmd BufWritePost * CommandTFlush
 augroup END
 
-set wildignore=tmp/**,node_modules/**,bin/**,~/workspace/mindmaps/docs
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+map <leader>T :CommandTFlush<cr>\|:CommandT %%<cr>
+
+set wildignore=tmp/**,*node_modules/**,bin/**,~/workspace/mindmaps/docs
 
 if has("gui_running")
   " disable toolbar in gvim
