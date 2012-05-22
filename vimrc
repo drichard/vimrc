@@ -20,6 +20,7 @@ Bundle 'lukaszb/vim-web-indent'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'wavded/vim-stylus'
 Bundle 'nono/vim-handlebars'
+Bundle 'scrooloose/nerdcommenter'
 
 filetype plugin indent on       " required!
 
@@ -64,6 +65,10 @@ set noeb vb t_vb=
 set number                      " line numbers
 nnoremap ; :
 " nnoremap : ;
+
+" move between tabs with t/T
+nnoremap t gt
+nnoremap T gT
 
 " use arrow keys to resize windows
 nmap <silent> <left>  :5wincmd <<cr>
@@ -171,4 +176,3 @@ if has("gui_running")
     endif
   endif
 endif
-

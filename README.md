@@ -27,6 +27,7 @@ Plugins
   * Needs coffeescript installed
 * vim-stylus
 * vim-handlebars
+* NERDCommenter
 
 All plugins are installed with vundle (https://github.com/gmarik/vundle/blob/master/README.md).
 
