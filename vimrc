@@ -123,6 +123,7 @@ set backupdir=~/tmp
 
 " Save all when focus is lost, skip untitled buffers
 :au FocusLost * silent! wa
+:au FocusLost * call feedkeys("\<C-\>\<C-n>") " Return to normal mode on FocustLost
 
 " In vim 7.3.74 and higher you can set clipboard=unnamedplus to alias unnamed
 " register to the + register, which is the X Window clipboard.
@@ -175,4 +176,9 @@ if has("gui_running")
       set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
     endif
   endif
+endif
+
+" Parse local vimrc (useful for per-project settings)
+if filereadable(".lvimrc")
+  source .lvimrc
 endif
