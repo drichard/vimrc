@@ -21,6 +21,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'wavded/vim-stylus'
 Bundle 'nono/vim-handlebars'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-markdown'
 
 filetype plugin indent on       " required!
 
@@ -117,9 +118,13 @@ nnoremap k gk
 
 map <F8> :Explore<CR>
 
+" swap/backup
 set swapfile
 set dir=~/tmp
 set backupdir=~/tmp
+
+" Wrap on text files
+autocmd BufNewFile,BufRead *.markdown,*.md,*.txt,*.rst setlocal wrap linebreak
 
 " Save all when focus is lost, skip untitled buffers
 :au FocusLost * silent! wa
