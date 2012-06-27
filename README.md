@@ -40,3 +40,10 @@ Installation
     ln -s /path/to/repo/vimrc .vimrc
 
     ln -s /path/to/repo .vim
+
+3. git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle 
+4. 
+    cd ~/.vim/bundle/command-t/ruby/command-t
+    ruby extconf.rb
+    make 
+
