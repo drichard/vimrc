@@ -124,7 +124,7 @@ set dir=~/tmp
 set backupdir=~/tmp
 
 " Wrap on text files
-autocmd BufNewFile,BufRead *.markdown,*.md,*.txt,*.rst setlocal wrap linebreak
+au BufNewFile,BufRead *.markdown,*.md,*.txt,*.rst setlocal wrap linebreak
 
 " Save all when focus is lost, skip untitled buffers
 :au FocusLost * silent! wa
@@ -133,6 +133,11 @@ autocmd BufNewFile,BufRead *.markdown,*.md,*.txt,*.rst setlocal wrap linebreak
 " In vim 7.3.74 and higher you can set clipboard=unnamedplus to alias unnamed
 " register to the + register, which is the X Window clipboard.
 set clipboard=unnamedplus
+
+
+" PLUGIN SETTINGS
+" ===============
+
 
 " compile coffeescript on save and focus lost
 "au BufWritePost *.coffee silent CoffeeMake! -b | cwindow
@@ -158,6 +163,7 @@ augroup CommandTExtension
   autocmd BufWritePost * CommandTFlush
 augroup END
 
+" whats that for?
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 map <leader>T :CommandTFlush<cr>\|:CommandT %%<cr>
