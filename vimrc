@@ -31,7 +31,7 @@ set background=dark
 
 " next 3 options for vim solarized in terminal
 set t_Co=256
-let g:solarized_termcolors=256
+"let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 colorscheme solarized
 
@@ -168,7 +168,7 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 map <leader>T :CommandTFlush<cr>\|:CommandT %%<cr>
 
-set wildignore=tmp/**,*node_modules/**,bin/**,~/workspace/mindmaps/docs
+set wildignore=tmp/**,*node_modules/**,bin/**
 
 if has("gui_running")
   " disable toolbar in gvim
@@ -182,7 +182,7 @@ if has("gui_running")
   if has("unix")
     let s:uname = system("uname")
     if s:uname == "Darwin\n"
-      set guifont=Menlo:h12
+      set guifont=Inconsolata-dz:h12
     else
       set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
     endif
