@@ -35,16 +35,20 @@ Installation
 ------------
 
 1. Checkout out repository
-2. In your home directory do:
+2. Setup sym links
 
-    ln -s /path/to/repo/vimrc .vimrc
-
-    ln -s /path/to/repo .vim
+    ```
+    ln -s /path/to/repo/vimrc ~/.vimrc
+    ln -s /path/to/repo ~/.vim
+    ```
 
 3. git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle 
-4. Open vim, `:BundleInstall`
-4. 
+4. Open vim, Type `:BundleInstall`
+4. Configure command-t:
+
+    ```
     cd ~/.vim/bundle/command-t/ruby/command-t
     ruby extconf.rb
-    make 
+    make
+    ```
 
