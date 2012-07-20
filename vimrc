@@ -105,6 +105,9 @@ inoremap <C-Space> <C-n>
 " clear search hl by pressing ESC
 nnoremap <CR> :nohlsearch<CR>/<BS>
 
+" playback macro in 'q'. Dont go into ex mode
+nnoremap Q @q
+
 " Reselect visual block after indent/outdent
 vnoremap < <gv
 vnoremap > >gv
@@ -132,7 +135,7 @@ au BufNewFile,BufRead *.markdown,*.md,*.txt,*.rst setlocal wrap linebreak
 
 " In vim 7.3.74 and higher you can set clipboard=unnamedplus to alias unnamed
 " register to the + register, which is the X Window clipboard.
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
 
 
 " PLUGIN SETTINGS
@@ -149,7 +152,7 @@ hi link coffeeParen NONE
 hi link coffeeSpecialVar Identifier
 
 " Ack vim
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+let g:ackprg="ack -H --nocolor --nogroup --column"
 nnoremap <leader>a :Ack 
 
 " Powerline

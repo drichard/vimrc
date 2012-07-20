@@ -1,1 +1,1 @@
-/home/david/workspace/vim-brunch/plugin/brunch.vim
+/Users/drichard/workspace/vim-brunch/plugin/brunch.vim

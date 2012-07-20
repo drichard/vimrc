@@ -1,1 +1,4 @@
 .DS_Store
+
+# dont put vundle's bundles into version control
+Bundle
